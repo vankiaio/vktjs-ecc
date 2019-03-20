@@ -13,9 +13,9 @@ module.exports = PublicKey
 
 /**
   @param {string|Buffer|PublicKey|ecurve.Point} public key
-  @param {string} [pubkey_prefix = 'EOS']
+  @param {string} [pubkey_prefix = 'VKT']
 */
-function PublicKey(Q, pubkey_prefix = 'EOS') {
+function PublicKey(Q, pubkey_prefix = 'VKT') {
     if(typeof Q === 'string') {
         const publicKey = PublicKey.fromString(Q, pubkey_prefix)
         assert(publicKey != null, 'Invalid public key')
