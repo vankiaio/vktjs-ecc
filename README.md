@@ -8,14 +8,14 @@ Private Key, Public Key, Signature, AES, Encryption / Decryption
 # Import
 
 ```js
-import ecc from 'vktjs-ecc'
+import ecc from 'ttmcjs-ecc'
 // or
-const ecc = require('vktjs-ecc')
+const ecc = require('ttmcjs-ecc')
 ```
 
 # Include
 
--   Install with: `npm install vktjs-ecc`
+-   Install with: `npm install ttmcjs-ecc`
 -   Html script tag, see [releases](https://github.com/vankiaio/vktjs-ecc/releases) for the correct **version** and its matching script **integrity** hash.
 
 ```html
@@ -33,7 +33,7 @@ const ecc = require('vktjs-ecc')
 
 </head>
 <body>
-  See console object: vktjs_ecc
+  See console object: ttmcjs_ecc
 </body>
 </html>
 ```
@@ -289,7 +289,7 @@ Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 # Usage (Object API)
 
 ```js
-let {PrivateKey, PublicKey, Signature, Aes, key_utils, config} = require('vktjs-ecc')
+let {PrivateKey, PublicKey, Signature, Aes, key_utils, config} = require('ttmcjs-ecc')
 
 // Create a new random private key
 let privateWif
@@ -310,7 +310,7 @@ pubkey = PrivateKey.fromString(privateWif).toPublic().toString()
 
 ```bash
 git clone https://github.com/vankiaio/vktjs-ecc.git
-cd vktjs-ecc
+cd ttmcjs-ecc
 npm install
 npm run build_browser
 # builds: ./dist/eosjs-ecc.js
