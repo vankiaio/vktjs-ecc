@@ -144,7 +144,7 @@ Returns **[wif](#wif)**
 
 #### Parameters
 
--   `wif` **[wif](#wif)**
+-   `wif` **[wif](#wif)** 
 -   `pubkey_prefix` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** public key prefix (optional, default `'VKT'`)
 
 #### Examples
