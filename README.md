@@ -15,7 +15,7 @@ const ecc = require('vktjs-ecc')
 
 # Include
 
--   Install with: `npm install vktjs-ecc`
+-   Install with: `yarn add vktjs-ecc`
 -   Html script tag, see [releases](https://github.com/vankiaio/vktjs-ecc/releases) for the correct **version** and its matching script **integrity** hash.
 
 ```html
@@ -97,7 +97,7 @@ generation.
 
 Initialization happens once even if called multiple times.
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
 ### unsafeRandomKey
 
@@ -122,7 +122,7 @@ console.log('Public Key:\t', ecc.privateToPublic(privateKey)) // VKTkey...
 })
 ```
 
-Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[wif](#wif)>**
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[wif](#wif)>** 
 
 ### seedPrivate
 
@@ -138,7 +138,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 ecc.seedPrivate('secret') === wif
 ```
 
-Returns **[wif](#wif)**
+Returns **[wif](#wif)** 
 
 ### privateToPublic
 
@@ -153,7 +153,7 @@ Returns **[wif](#wif)**
 ecc.privateToPublic(wif) === pubkey
 ```
 
-Returns **[pubkey](#pubkey)**
+Returns **[pubkey](#pubkey)** 
 
 ### isValidPublic
 
@@ -174,7 +174,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### Parameters
 
--   `wif` **[wif](#wif)**
+-   `wif` **[wif](#wif)** 
 
 #### Examples
 
@@ -190,8 +190,8 @@ Create a signature using data or a hash.
 
 #### Parameters
 
--   `data` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))**
--   `privateKey` **([wif](#wif) | PrivateKey)**
+-   `data` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))** 
+-   `privateKey` **([wif](#wif) | PrivateKey)** 
 -   `encoding` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** data encoding (if string) (optional, default `'utf8'`)
 
 #### Examples
@@ -207,7 +207,7 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 #### Parameters
 
 -   `dataSha256` **([String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))** sha256 hash 32 byte buffer or string
--   `privateKey` **([wif](#wif) | PrivateKey)**
+-   `privateKey` **([wif](#wif) | PrivateKey)** 
 -   `encoding` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** dataSha256 encoding (if string) (optional, default `'hex'`)
 
 Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** string signature
@@ -219,8 +219,8 @@ Verify signed data.
 #### Parameters
 
 -   `signature` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))** buffer or hex string
--   `data` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))**
--   `pubkey` **([pubkey](#pubkey) | PublicKey)**
+-   `data` **([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))** 
+-   `pubkey` **([pubkey](#pubkey) | PublicKey)** 
 -   `encoding`   (optional, default `'utf8'`)
 -   `hashData` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** sha256 hash data before verify (optional, default `true`)
 
@@ -230,7 +230,7 @@ Verify signed data.
 ecc.verify(signature, 'I am alive', pubkey) === true
 ```
 
-Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)**
+Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)** 
 
 ### recover
 
@@ -248,7 +248,7 @@ Recover the public key used to create the signature.
 ecc.recover(signature, 'I am alive') === pubkey
 ```
 
-Returns **[pubkey](#pubkey)**
+Returns **[pubkey](#pubkey)** 
 
 ### recoverHash
 
@@ -258,7 +258,7 @@ Returns **[pubkey](#pubkey)**
 -   `dataSha256` **([String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Buffer](https://nodejs.org/api/buffer.html))** sha256 hash 32 byte buffer or hex string
 -   `encoding` **[String](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** dataSha256 encoding (if dataSha256 is a string) (optional, default `'hex'`)
 
-Returns **PublicKey**
+Returns **PublicKey** 
 
 ### sha256
 
@@ -311,8 +311,8 @@ pubkey = PrivateKey.fromString(privateWif).toPublic().toString()
 ```bash
 git clone https://github.com/vankiaio/vktjs-ecc.git
 cd vktjs-ecc
-npm install
-npm run build_browser
+yarn
+yarn build_browser
 # builds: ./dist/eosjs-ecc.js
 # Verify release hash
 ```
